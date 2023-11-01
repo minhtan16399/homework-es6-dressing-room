@@ -36,7 +36,7 @@
 
 /* BEGIN MODEL */
 .contain {
-  width: 460px;
+  width: 430px;
   height: 590px;
   margin: 0 auto;
   position: relative;
@@ -47,15 +47,16 @@
   background: url("./../images/allbody/bodynew.png");
   position: absolute;
   top: 12%;
-  left: 22%;
+  left: 20.5%;
 }
 .bikinitop {
   width: 250px;
   height: 500px;
-  background: url("./../images/allbody/bikini_branew.png");
+  background: url("./../images/allbody/bikini_bra.png");
+  background-size: contain;
   position: absolute;
   top: 12%;
-  left: 22%;
+  left: 20.5%;
   z-index: 1;
 }
 
@@ -65,7 +66,7 @@
   background: url("./../images/allbody/bikini_pantsnew.png");
   position: absolute;
   top: 12%;
-  left: 22%;
+  left: 20.5%;
   z-index: 1;
 }
 
@@ -83,8 +84,8 @@
   width: 500px;
   height: 1000px;
   position: absolute;
-  bottom: -40.5%;
-  right: -3.5%;
+  bottom: -39.5%;
+  right: -7.5%;
   transform: scale(0.5);
   z-index: 4;
 }
@@ -93,8 +94,8 @@
   width: 500px;
   height: 1000px;
   position: absolute;
-  bottom: -40%;
-  right: -3.5%;
+  bottom: -39%;
+  right: -7.5%;
   transform: scale(0.5);
   z-index: 4;
 }
@@ -103,9 +104,9 @@
   width: 1000px;
   height: 1000px;
   position: absolute;
-  top: -75%;
-  right: -57%;
-  transform: scale(0.15);
+  top: -73.5%;
+  right: -67%;
+  transform: scale(0.18);
   z-index: 4;
 }
 
@@ -114,22 +115,22 @@
   height: 1000px;
   background: url("./../images/shoes/shoes1.png");
   position: absolute;
-  bottom: -37%;
-  right: -3.5%;
+  bottom: -38%;
+  right: -7.5%;
   transform: scale(0.5);
-  z-index: 1;
+  z-index: 0.5;
 }
 
 .background {
-  width: 900px;
+  width: 830px;
   height: 1500px;
   background-image: url(./../images/background/background1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  bottom: -90%;
-  right: -50%;
-  transform: scale(0.5);
+  bottom: -97%;
+  right: -44%;
+  transform: scale(0.55);
   z-index: -1;
 }
 
