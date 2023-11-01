@@ -56,24 +56,49 @@ function showItem(product) {
     for (let item of product) {
         let img = item.imgSrc_jpg;
         let name = item.name;
+        let imgBtn = item.imgSrc_png;
         let createItem = document.createElement('div');
         createItem.className = 'card w-25';
         let createImgItem = document.createElement('img');
         createImgItem.className = 'card-img-top';
         createImgItem.src = img;
         let createNameItem = document.createElement('H5');
-        createNameItem.className = 'card-title mt-2';
+        createNameItem.className = 'card-title mt-2 text-center';
         createNameItem.innerHTML = name;
         let createBtn = document.createElement('button');
         createBtn.className = 'btn btn-outline-secondary';
-        createBtn.innerText = 'Thu do'
-
+        createBtn.innerText = 'Thu do';
+        createBtn.addEventListener('click', async (e) => {
+            await tryOnProduct(item, imgBtn);
+        });
         document.querySelector('.tab-content').appendChild(createItem);
         createItem.appendChild(createImgItem);
         createItem.appendChild(createNameItem);
         createItem.appendChild(createBtn);
-
-
     };
-}
+};
+//
 
+// khi ấn nút thử đồ, sẽ duyệt type từ api sau đó dom đến thẻ cần thay đổi. 
+function tryOnProduct (item, imgBtn) {
+    let domDiv = '';
+    if (item.type === 'topclothes') {
+        domDiv = '.bikinitop';
+    } else if (item.type === 'botclothes') {
+        domDiv = '.bikinibottom';
+    } else if (item.type === 'shoes') {
+        domDiv = '.feet';
+    } else if (item.type === 'handbags') {
+        domDiv = '.handbag';
+    } else if (item.type === 'necklaces') {
+        domDiv = '.necklace';
+    } else if (item.type === 'hairstyle') {
+        domDiv = '.hairstyle';
+    } else if (item.type === 'background') {
+        domDiv = '.background';
+    };
+    let dom = document.querySelector(domDiv);
+    dom.style.background = 'url(' + imgBtn + ')no-repeat';
+    dom.style.backgroundSize = 'cover';
+    // console.log(dom, imgBtn);
+};
